@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="/assets/style.css" type="text/css"></link>
+<link rel="stylesheet" href="/resources/style.css" type="text/css" />
 <title>{{.Title}}</title>
 </head>
 <body>
@@ -19,24 +19,22 @@
 </ul>
 </nav>
 </div>
-{{with .Band}}
 <table align="center">
-<caption>{{.Value.Name}}</caption>
+<caption>{{.Band.Name}}</caption>
 <tr>
   <th>Name</th>
   <th>Genre</th>
   <th>Year</th>
 </tr>
-{{if .Value.Albums}}
-{{range .GetAlbums}}
+{{if .Band.Albums}}
+{{range .Band.Albums}}
 <tr>
 <td>{{.Name}}</td>
-<td>{{.GetGenreName}}</td>
+<td>{{.GetGenreName $.Request}}</td>
 <td>{{.Year}}</td>
 </tr>
 {{end}}
 {{end}}
 </table>
-{{end}}
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="/assets/style.css" type="text/css" />
+<link rel="stylesheet" href="/resources/style.css" type="text/css" />
 <title>{{.Title}}</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
         <td><INPUT TYPE="radio" NAME="genretype" value="existing" checked></td>
         <td><SELECT NAME="genre_id">
             {{range .Genres}}
-                <OPTION value="{{.DocKey}}">{{.Value.name}}</OPTION>
+                <OPTION value="{{.Id}}">{{.Value.Name}}</OPTION>
             {{end}}
             </SELECT>
         </td>

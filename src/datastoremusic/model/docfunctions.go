@@ -24,6 +24,11 @@ type Album struct {
 	Name    string
 	GenreId *datastore.Key
 	Year    int
+	//	Request *http.Request
+}
+
+type Genre struct {
+	Name string
 }
 
 type Location struct {
@@ -61,7 +66,19 @@ func GetAllDocs(rq *http.Request, docType string) ([]Doc, error) {
 			}
 			doc := Doc{Id: key, Value: obj, Request: rq}
 			docs = append(docs, doc)
+			break
+		case config.GENRE_TYPE:
+			obj := Genre{}
+			err2 := datastore.Get(c, key, &obj)
+			if err2 != nil {
+				log.Println("GetAllDocs error: " + err2.Error())
+				return nil, err2
+			}
+			doc := Doc{Id: key, Value: obj, Request: rq}
+			docs = append(docs, doc)
+			break
 		}
+
 	}
 	return docs, nil
 }
@@ -123,4 +140,36 @@ func FindLocation(location Location, rq *http.Request) (*datastore.Key, error) {
 		break
 	}
 	return k, nil
+}
+
+func GetBand(bandId *datastore.Key, rq *http.Request) (Band, error) {
+	c := appengine.NewContext(rq)
+	var band Band
+	err := datastore.Get(c, bandId, &band)
+	return band, err
+}
+
+func AddGenre(genre Genre, rq *http.Request) (*datastore.Key, error) {
+	c := appengine.NewContext(rq)
+	k := datastore.NewIncompleteKey(c, config.GENRE_TYPE, nil)
+	key, err := datastore.Put(c, k, &genre)
+
+	return key, err
+}
+
+func AddAlbum(album Album, key *datastore.Key, rq *http.Request) error {
+	band, err := GetBand(key, rq)
+	if err != nil {
+		return err
+	}
+	band.Albums = append(band.Albums, album)
+	_, err = datastore.Put(appengine.NewContext(rq), key, &band)
+	return err
+}
+
+func (this Album) GetGenreName(rq *http.Request) string {
+	c := appengine.NewContext(rq)
+	var genre Genre
+	datastore.Get(c, this.GenreId, &genre)
+	return genre.Name
 }

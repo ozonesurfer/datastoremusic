@@ -1,4 +1,4 @@
-application: datastoremusic
+application: proven-electron-569
 version: 1
 runtime: go
 api_version: go1

@@ -25,9 +25,9 @@
 <th>Name</th><th>Location</th><th>Albums</th>
 </tr>
 <!-- put the band-level data here -->
-{{range .Band}}
+{{range .Bands}}
 <tr>
-<td>{{.Value.Name}}</td><td>{{.Value.LocationId}}</td><td><a href="/album/index/{{.Id}}">Albums</a></td>
+<td>{{.Value.Name}}</td><td>{{.GetLocation}}</td><td><a href="/album/index/{{.Id}}">Albums</a></td>
 </tr>
 {{end}}
 </table>

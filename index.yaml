@@ -1,0 +1,6 @@
+indexes:
+
+- kind: Band
+  properties:
+  - name: Albums
+

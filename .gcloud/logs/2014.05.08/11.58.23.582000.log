@@ -1,0 +1,125 @@
+2014-05-08 11:58:23,601 DEBUG    root            Metrics started...
+2014-05-08 11:58:23,615 DEBUG    root            Running gcloud.components.update with _Args({'allow_no_backup': False,
+ 'api_host': None,
+ 'architecture_override': None,
+ 'component_ids': [],
+ 'h': None,
+ 'help': None,
+ 'operating_system_override': None,
+ 'project': None,
+ 'quiet': None,
+ 'sdk_root_override': None,
+ 'snapshot_url_override': None,
+ 'user_output_enabled': None,
+ 'verbosity': None}).
+2014-05-08 11:58:24,325 DEBUG    root            Sent event: Event(category='Executions', action='gcloud', label=u'2014.04.30', value=0)
+2014-05-08 11:58:24,440 DEBUG    root            Sent event: Event(category='Commands', action='gcloud.components.update', label='unknown', value=0)
+2014-05-08 11:58:24,464 INFO     ___FILE_ONLY___ 
+
+2014-05-08 11:58:24,466 INFO     ___FILE_ONLY___ The following components will be removed:
+
+2014-05-08 11:58:24,467 INFO     ___FILE_ONLY___     -------------------------------------------------------------
+
+2014-05-08 11:58:24,467 INFO     ___FILE_ONLY___     | App Engine SDK for Go (Windows, x86_64) | 1.9.4 | 30.8 MB |
+
+2014-05-08 11:58:24,467 INFO     ___FILE_ONLY___     -------------------------------------------------------------
+
+2014-05-08 11:58:24,467 INFO     ___FILE_ONLY___ The following components will be updated:
+
+2014-05-08 11:58:24,469 INFO     ___FILE_ONLY___     ----------------------------------------------------------------
+
+2014-05-08 11:58:24,469 INFO     ___FILE_ONLY___     | App Engine SDK for Python and PHP      | 2014.05.06 | < 1 MB |
+
+2014-05-08 11:58:24,470 INFO     ___FILE_ONLY___     | Cloud SDK Core Libraries               | 2014.05.06 | < 1 MB |
+
+2014-05-08 11:58:24,470 INFO     ___FILE_ONLY___     | Cloud SQL Admin Command Line Interface | 2014.05.06 | < 1 MB |
+
+2014-05-08 11:58:24,470 INFO     ___FILE_ONLY___     ----------------------------------------------------------------
+
+2014-05-08 11:58:24,470 INFO     ___FILE_ONLY___ The following components will be installed:
+
+2014-05-08 11:58:24,471 INFO     ___FILE_ONLY___     -------------------------------------------------------------------------
+
+2014-05-08 11:58:24,473 INFO     ___FILE_ONLY___     | App Engine SDK for Go                          |            |         |
+
+2014-05-08 11:58:24,473 INFO     ___FILE_ONLY___     | Compute Engine Command Line Interface (RC)     | 2014.05.06 |  < 1 MB |
+
+2014-05-08 11:58:24,473 INFO     ___FILE_ONLY___     | gcloud app Go Extensions (Windows, x86_64)     |      1.9.4 | 30.8 MB |
+
+2014-05-08 11:58:24,473 INFO     ___FILE_ONLY___     | gcloud app Python Extensions                   |      1.9.4 |  6.4 MB |
+
+2014-05-08 11:58:24,474 INFO     ___FILE_ONLY___     | gcloud app Python Extensions (Extra Libraries) |      1.9.4 | 29.6 MB |
+
+2014-05-08 11:58:24,474 INFO     ___FILE_ONLY___     -------------------------------------------------------------------------
+
+2014-05-08 11:58:24,476 INFO     ___FILE_ONLY___ 
+
+2014-05-08 11:58:30,437 INFO     ___FILE_ONLY___ Creating update staging area...
+
+
+2014-05-08 11:58:30,523 DEBUG    root            Sent event: Event(category='Installs', action=u'gae-go', label=u'', value=0)
+2014-05-08 11:58:30,619 DEBUG    root            Sent event: Event(category='Installs', action=u'gae-python', label=u'2014.05.06', value=0)
+2014-05-08 11:58:30,717 DEBUG    root            Sent event: Event(category='Installs', action=u'core', label=u'2014.05.06', value=0)
+2014-05-08 11:58:30,808 DEBUG    root            Sent event: Event(category='Installs', action=u'sql', label=u'2014.05.06', value=0)
+2014-05-08 11:58:30,895 DEBUG    root            Sent event: Event(category='Installs', action=u'compute', label=u'2014.05.06', value=0)
+2014-05-08 11:58:30,983 DEBUG    root            Sent event: Event(category='Installs', action=u'app-engine-go-windows-x86_64', label=u'1.9.4', value=0)
+2014-05-08 11:58:31,072 DEBUG    root            Sent event: Event(category='Installs', action=u'app-engine-python', label=u'1.9.4', value=0)
+2014-05-08 11:58:31,194 DEBUG    root            Sent event: Event(category='Installs', action=u'app-engine-python-extras', label=u'1.9.4', value=0)
+2014-05-08 12:08:21,502 INFO     ___FILE_ONLY___ Uninstalling: App Engine SDK for Go (Windows, x86_64) ... 
+2014-05-08 12:08:22,966 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:08:22,967 INFO     ___FILE_ONLY___ Uninstalling: App Engine SDK for Python and PHP ... 
+2014-05-08 12:09:13,882 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:13,884 INFO     ___FILE_ONLY___ Uninstalling: Cloud SDK Core Libraries ... 
+2014-05-08 12:09:14,158 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:14,160 INFO     ___FILE_ONLY___ Uninstalling: Cloud SQL Admin Command Line Interface ... 
+2014-05-08 12:09:14,214 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:14,216 INFO     ___FILE_ONLY___ 
+
+2014-05-08 12:09:14,217 INFO     ___FILE_ONLY___ Installing: App Engine SDK for Go ... 
+2014-05-08 12:09:14,233 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:14,233 INFO     ___FILE_ONLY___ Installing: App Engine SDK for Python and PHP ... 
+2014-05-08 12:09:16,335 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:16,335 INFO     ___FILE_ONLY___ Installing: Cloud SDK Core Libraries ... 
+2014-05-08 12:09:20,473 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:20,474 INFO     ___FILE_ONLY___ Installing: Cloud SQL Admin Command Line Interface ... 
+2014-05-08 12:09:20,878 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:20,878 INFO     ___FILE_ONLY___ Installing: Compute Engine Command Line Interface (RC) ... 
+2014-05-08 12:09:23,413 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:09:23,414 INFO     ___FILE_ONLY___ Installing: gcloud app Go Extensions (Windows, x86_64) ... 
+2014-05-08 12:10:06,296 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:10:06,296 INFO     ___FILE_ONLY___ Installing: gcloud app Python Extensions ... 
+2014-05-08 12:10:40,760 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:10:40,760 INFO     ___FILE_ONLY___ Installing: gcloud app Python Extensions (Extra Libraries) ... 
+2014-05-08 12:13:47,667 INFO     ___FILE_ONLY___ Done
+
+2014-05-08 12:13:47,667 INFO     ___FILE_ONLY___ 
+
+2014-05-08 12:13:47,667 INFO     ___FILE_ONLY___ Creating backup and activating new installation...
+
+2014-05-08 12:13:47,668 DEBUG    root            Attempting to move directory [C:\google-cloud-sdk] to [C:\google-cloud-sdk.staging\.install\.backup]
+2014-05-08 12:13:48,723 DEBUG    root            Attempting to move directory [C:\google-cloud-sdk.staging] to [C:\google-cloud-sdk]
+2014-05-08 12:13:49,003 INFO     ___FILE_ONLY___ 
+Done!
+
+
+2014-05-08 12:13:49,051 WARNING  root            There are older versions of Google Cloud Platform tools on your system PATH.
+Please remove the following to avoid accidentally invoking these old tools:
+
+c:\google-cloud-sdk\platform\google_appengine\dev_appserver.py
+c:\google-cloud-sdk\platform\google_appengine\google_sql.py
+c:\google-cloud-sdk\platform\google_appengine\appcfg.py
+c:\google-cloud-sdk\platform\google_appengine\endpointscfg.py
+
+
+2014-05-08 12:13:49,056 DEBUG    root            Shutting down metrics...

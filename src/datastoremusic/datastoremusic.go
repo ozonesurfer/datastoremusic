@@ -13,5 +13,7 @@ func init() {
 	http.HandleFunc("/album/index/", controllers.AlbumIndexController)
 	http.HandleFunc("/album/add/", controllers.AlbumAddController)
 	http.HandleFunc("/album/verify/", controllers.AlbumVerifyCountroller)
+	http.HandleFunc("/home/genrelist", controllers.GenreListController)
+	http.HandleFunc("/home/bygenre/", controllers.ByGenreController)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("resources"))))
 }

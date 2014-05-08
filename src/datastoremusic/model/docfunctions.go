@@ -173,3 +173,33 @@ func (this Album) GetGenreName(rq *http.Request) string {
 	datastore.Get(c, this.GenreId, &genre)
 	return genre.Name
 }
+
+func GetGenreName(rq *http.Request, genreId *datastore.Key) string {
+	c := appengine.NewContext(rq)
+	var genre Genre
+	datastore.Get(c, genreId, &genre)
+	return genre.Name
+}
+
+func GetBandsByGenre(rq *http.Request, genreId *datastore.Key) ([]*Doc, error) {
+	c := appengine.NewContext(rq)
+	log.Println("Recieved key", genreId)
+	q := datastore.NewQuery("Band").Filter("Albums.GenreId =", genreId)
+	var bands []Band
+	keys, err := q.GetAll(c, &bands)
+	if err != nil {
+		log.Println("Key retrieval error:", err)
+		return nil, err
+	} else {
+		log.Println("Key retrieval successful")
+		log.Println("Found", len(keys), "keys")
+	}
+	var docs []*Doc
+	for i := range keys {
+		doc := new(Doc)
+		doc.Id = keys[i]
+		doc.Value = bands[i]
+		docs = append(docs, doc)
+	}
+	return docs, nil
+}

@@ -8,4 +8,4 @@ You will also need Python 2.7, which you can get at
 
 <b>https://www.python.org/downloads/</b>
 
-This program is currently under construction.
+To run this application, put the path of "goapp" in your search path, then run <code>goapp serve</code> in the repository dicrectory. The input validation is minimal, so be careful!

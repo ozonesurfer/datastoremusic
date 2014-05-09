@@ -13,14 +13,14 @@
 </tr>
 <tr>
 <td>Location:</td>
-<td><input type="radio" name="loctype" value="existing" checked /></td>
+<td><input type="radio" name="loctype" value="existing" checked >Choose</input></td>
 <td><select name="location_id">
 {{range .Locations}}
 <option value="{{.Id}}">{{.LocToString}}</option>
 {{end}}
 </select></td>
 </tr>
-<tr><td /><td><input type="radio" name="loctype" value="new" /></td><td>
+<tr><td /><td><input type="radio" name="loctype" value="new">Create</input></td><td>
 <table>
 <tr>
 <td>City:</td><td><input type="text" name="city" /></td>

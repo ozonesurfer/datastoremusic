@@ -184,7 +184,7 @@ func GetGenreName(rq *http.Request, genreId *datastore.Key) string {
 func GetBandsByGenre(rq *http.Request, genreId *datastore.Key) ([]*Doc, error) {
 	c := appengine.NewContext(rq)
 	log.Println("Recieved key", genreId)
-	q := datastore.NewQuery("Band").Filter("Albums.GenreId =", genreId)
+	q := datastore.NewQuery(config.BAND_TYPE).Filter("Albums.GenreId =", genreId)
 	var bands []Band
 	keys, err := q.GetAll(c, &bands)
 	if err != nil {
